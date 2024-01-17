@@ -1,0 +1,513 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Sansita:ital,wght@0,400;0,700;1,700;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: "Playfair Display", serif;
+}
+/* initialize */
+a {
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+
+img {
+  width: 100%;
+}
+section {
+  padding: 3rem 0 2rem;
+}
+/* nav bar */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 200;
+}
+.container {
+  max-width: 1068px;
+  margin: auto;
+  width: 100%;
+  gap: 10px;
+}
+header.shadow {
+  background: rgb(3, 40, 252);
+  transition: 0.4s ease-in;
+}
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 0;
+}
+.logo {
+  font-size: 2rem;
+  font-weight: 400;
+  color: #fff;
+}
+.logo2 {
+  color: chocolate;
+}
+.contact {
+  padding: 8px 14px;
+  text-transform: uppercase;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  color: #fff;
+  font-size: 20px;
+  background: rgb(8, 6, 148);
+  box-shadow: 10px 10px 14px hsla(221, 79%, 77%, 0.1);
+  &:hover {
+    background: rgb(168, 78, 13);
+  }
+}
+/* home */
+.home {
+  width: 100%;
+  min-height: 400px;
+  background: url(https://www.elexoft.com/blogs/wp-content/uploads/2021/05/programming-web-banner-best-languages-260nw-1676060566.jpg)
+    no-repeat center;
+  display: flex;
+
+  color: #fff;
+  min-height: 500px;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.home-text {
+  color: #fff;
+  text-align: center;
+}
+.home-title {
+  font-size: 45px;
+  letter-spacing: 1.5px;
+}
+.home-subtitle {
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 2px;
+}
+
+/* post */
+.post-filter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 2rem;
+  margin-top: 2rem !important;
+}
+.filter-item {
+  font-size: 20px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  cursor: pointer;
+}
+.active-filter {
+  background: rgb(8, 8, 116);
+  color: #fff;
+  padding: 4px 20px;
+  border-radius: 8px;
+}
+/* post */
+.post {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, auto));
+  justify-content: center;
+  gap: 1.5rem;
+}
+.post-box {
+  background: rgb(241, 239, 235);
+  box-shadow: 0 4px 14px hsl(355deg 25% 15% / 10%);
+  padding: 15px;
+  border-radius: 0.5rem;
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+}
+.post-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 0.5rem;
+}
+.category {
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: chocolate;
+}
+.post-title {
+  font-size: 1.5rem;
+  text-transform: capitalize;
+  font-weight: 600;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* display: -webkit-box;
+    -webkit-line-orient: vetical;
+    -webkit-line-clamp: 2; */
+}
+.more {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.read {
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  color: #1d1717;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+.post-data {
+  display: flex;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 15px;
+  text-transform: uppercase;
+  font-weight: 400;
+  margin-top: 4px;
+  overflow: hidden;
+}
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.profile-img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 2px solid #887272;
+}
+
+.profile-name {
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+/* foooter */
+
+footer {
+  position: relative;
+  width: 100%;
+  height: auto;
+  padding: 50px 100px;
+  margin-top: 3rem;
+  background: #111;
+  display: flex;
+  font-family: sans-serif;
+  justify-content: space-between;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.footer-container .sec {
+  margin-right: 30px;
+}
+
+.footer-container .sec.aboutus {
+  width: 40%;
+}
+
+.footer-container h2 {
+  position: relative;
+  color: #fff;
+  margin-bottom: 15px;
+}
+
+.footer-container h2::before {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 50px;
+  height: 2px;
+  background: rgb(77, 228, 255);
+}
+
+footer p {
+  color: #fff;
+}
+
+.sci {
+  margin: 20px;
+  display: flex;
+}
+
+.sci li {
+  list-style: none;
+}
+
+.sci li a {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background: #222;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: 0.5s;
+}
+
+.sci li a:hover {
+  background: rgb(77, 228, 255);
+}
+
+.sci i a .bx {
+  color: #fff;
+  font-size: 20px;
+}
+
+.quicklinks {
+  position: relative;
+  width: 25%;
+}
+
+.quicklinks ul li {
+  list-style: none;
+}
+
+.quicklinks ul li a {
+  color: #999;
+  text-decoration: none;
+  margin-bottom: 10px;
+  display: inline-block;
+  transition: 0.3s;
+}
+
+.quicklinks ul li a:hover {
+  color: #fff;
+}
+
+.footer-container .contactBx {
+  width: calc(35% - 60px);
+  margin-right: 0 !important;
+}
+
+.contactBx .info {
+  position: relative;
+}
+
+.contactBx .info li {
+  display: flex !important;
+  margin-bottom: 16px;
+}
+
+.contactBx .info li span:nth-child(1) {
+  color: #fff;
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+.contactBx .info li span {
+  color: #999;
+}
+
+.contactBx .info li a {
+  color: #999;
+  text-decoration: none;
+  transition: 0.5s;
+}
+
+.contactBx .info li a:hover {
+  color: #fff;
+}
+a .bx {
+  font-size: 20px;
+  color: #fff;
+}
+.end {
+  color: #fff;
+  padding: 20px;
+  width: 100%;
+  font-size: 30px;
+  text-align: center;
+  background: #000;
+}
+.color {
+  color: chocolate;
+}
+/* media responsive */
+
+@media (max-width: 1060px) {
+  .container {
+    margin: 0 auto;
+    width: 95%;
+  }
+
+  .home-text {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav {
+    padding: 10px 0;
+  }
+  .end {
+    font-size: 20px;
+  }
+  section {
+    padding: 2rem 0 !important;
+  }
+
+  .header-content {
+    margin-top: 3rem !important;
+  }
+
+  .home {
+    min-height: 380px;
+  }
+
+  .home-title {
+    font-size: 3rem;
+  }
+
+  .header-title {
+    font-size: 2rem;
+  }
+
+  .header-img {
+    height: 370px;
+  }
+
+  .about {
+    flex-direction: column;
+  }
+
+  .about .contentBx {
+    min-width: 100%;
+    width: 100%;
+    text-align: center;
+    padding-right: 0px;
+  }
+
+  .about .contentBx,
+  .about .imgBx {
+    min-width: 100%;
+    width: 100%;
+    padding-right: 0px;
+    text-align: center;
+  }
+
+  .about .imgBx {
+    min-height: 250px;
+  }
+
+  .btn2 {
+    margin-bottom: 30px;
+  }
+
+  .post-header {
+    height: 435px;
+  }
+
+  .post-header {
+    margin-top: 9rem !important;
+  }
+}
+
+@media (max-width: 570px) {
+  .post-header {
+    height: 390px;
+  }
+
+  .header-title {
+    width: 100%;
+  }
+
+  .header-img {
+    height: 340px;
+  }
+}
+
+@media (max-width: 396px) {
+  .home-title {
+    font-size: 2rem;
+  }
+
+  .home-subtitle {
+    font-size: 0.9rem;
+  }
+
+  .home {
+    min-height: 300px;
+  }
+
+  .post-box {
+    padding: 10px;
+  }
+
+  .header-title {
+    font-size: 1.4rem;
+  }
+
+  .header-img {
+    height: 240px;
+  }
+
+  .post-header {
+    height: 335px;
+  }
+
+  .header-img {
+    height: 340px;
+  }
+}
+
+/* Footer Media Query */
+@media (max-width: 991px) {
+  footer {
+    padding: 40px;
+    font-size: 20px;
+  }
+
+  footer .footer-container {
+    flex-direction: column;
+  }
+
+  footer .footer-container .sec {
+    margin-right: 0;
+    margin-bottom: 40px;
+  }
+
+  footer .footer-container .sec.aboutus {
+    width: 100% !important;
+  }
+
+  footer .footer-container .quicklinks {
+    width: 100%;
+  }
+
+  footer .footer-container .contactBx {
+    width: 100%;
+  }
+}
